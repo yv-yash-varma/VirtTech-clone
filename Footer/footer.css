@@ -1,0 +1,82 @@
+*{
+    color: white;
+    font-size: large;
+    margin: 0px;
+}
+    
+.box{
+    border: 1px solid white;
+    background-color: rgb(58, 58, 58);   
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    min-height: 50px;
+}
+
+
+.grid-footer{
+    display: grid;
+    /* grid-template-rows: repeat(5,1fr); */
+
+    grid-template-areas:
+     "one two"
+     "one three"
+     "one five"
+     "four six"
+     "seven seven"
+    ;
+}
+
+
+#footer-logo{
+    grid-area:one;
+}
+
+#project{
+    grid-area:two;
+}
+
+#mentorship{
+    grid-area:three;
+}
+
+#footer-button{
+    grid-area:four;
+}
+
+#web{
+    grid-area:five;
+}
+
+.socials{
+    display: grid;
+    grid-area:six;
+    grid-template-columns: repeat(4,1fr);
+    /* border: 1px solid red; */
+}
+
+.icon{
+    /* display: inline-grid; */
+    /* display: inline-flex; */
+    padding: 0 0.5rem;
+    
+}
+
+#copyright{
+    grid-area:seven;
+}
+
+@media (min-width:1000px){
+    .grid-footer{
+        display: grid;
+        grid-template-areas: 
+        "one"
+        "two"
+        "three"
+        "four"
+        "five"
+        "six"
+        "seven"
+        ;
+    }
+}
